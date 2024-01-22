@@ -3,29 +3,90 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  jusitfy-content: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.solid:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h2{
+    font-size: 1rem;
 }
 
-.card {
-  padding: 2em;
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background: rgba(0,0,0,0.5);
+    padding: 2rem;
+    min-width: 550px;
+    max-width: 550px;
+    min-height: 220px;
+    border-radius: 8px;
 }
 
-.read-the-docs {
-  color: #888;
+.container.center{
+    align-items: center;
 }
 
-.btn{
-    display: block;
+.container div{
+    margin: 4px 0;
 }
+
+.container div label{
+    margin-left: 5px;
+}   
+
+.btn-container{
+    min-wdith: 550px;
+    max-width: 550px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+
+.btn-container button{
+    font-size: 16px;
+    padding: 0.5rem 2rem;
+    min-width: 150px;
+}
+
+.btn-container button:hover{
+    border: 1px solid #f7f7f7;
+    background: #fff;
+    color: #121212;
+}
+
+.btn-container .prediction{
+    background: #1a6302;
+    color: #fff;
+}
+
+.btn-container .prediction:hover{
+    background: #238204;
+    border: 1px solid #238204;
+    color: #fff;
+}
+
+.number-input{
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    background: #353635;
+    border-radius: 7px;
+    border: none;
+}
+
+.container h3{
+    margin-top: 0.5rem;
+}
+
+.range-slider{
+    margin-top: 0.25rem;
+    background: #f00;
+    width: 200px;
+}
+
