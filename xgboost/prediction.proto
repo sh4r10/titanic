@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package predictor;
+
+service PredictorService { rpc Predict(Input) returns (Prediction); }
+
+message Input {
+  int32 pclass = 1;
+  int32 age = 2;
+  float fare = 3;
+  bool female = 4;
+}
+
+message Prediction { bool survive = 1; }
