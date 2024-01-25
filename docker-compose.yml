@@ -12,3 +12,10 @@ services:
       - SERVER_ADDRESS=xgboost:5500
     ports:
       - "4000:4000"
+  client:
+    build: client/
+    depends_on:
+      - xgboost
+      - server
+    ports:
+      - "5173:8080"
