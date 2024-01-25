@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  xgboost:
+    build: xgboost/
+    ports:
+      - "5500:5500"
+  server:
+    build: server/
+    depends_on:
+      - xgboost
+    environment:
+      - SERVER_ADDRESS=xgboost:5500
+    ports:
+      - "4000:4000"

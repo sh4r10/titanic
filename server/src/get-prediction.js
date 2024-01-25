@@ -13,7 +13,7 @@ const getPrediction = (input) => {
     console.log(input);
 
     client.predict(input, { deadline: Date.now() + TIMEOUT }, (err, res) => {
-      if (err) reject(err);
+      if (err) reject("an error occurred with grpc");
       else resolve(res.survive ? res : { survive: false });
     });
   });
